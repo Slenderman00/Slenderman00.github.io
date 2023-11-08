@@ -1,0 +1,159 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0A0908;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: #0A0908;
+    filter: blur(3px);
+}
+
+.center {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.card {
+    z-index: -1;
+    width: 960px;
+    height: 100%;
+    color: #FFFAFA;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 300px;
+}
+
+.card .card-title {
+    width: 100%;
+    font-size: 40px;
+}
+
+.card .card-content {
+    display: flex;
+    color: black;
+    background-color: #FFFAFA;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.card .card-content .inline {
+    display: inline-block;
+}
+
+.card .infobox {
+    width: 500px;
+    height: 80%;
+    margin: auto;
+}
+
+.round-image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+}
+
+#timeline {
+    background-color: #0000005b;
+    overflow-x: hidden;
+    width: 100vw;
+    white-space: nowrap;
+    position: fixed;
+    bottom:  0px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+}
+
+.index-item {
+    color: black;
+    background-color: #FFFAFA;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.index-item:hover {
+    cursor: pointer;
+    border: 5px solid #0a0908;
+    background-color: #fffafad7;
+}
+
+.index-item-hover {
+    cursor: pointer;
+    border: 5px solid #0a0908;
+    background-color: #fffafad7;
+}
+
+.index-item-title-and-date {
+    display: flex;
+    justify-content: space-between;
+}
+
+.index-item-title {
+    font-size: 23px;
+}
+
+.card a {
+    color: black;
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: blue;
+}
+
+.social {
+    position: relative;
+    top: -25px;
+    margin-left: 15px;
+}
+
+.social:hover {
+    cursor: pointer;
+}
+
+.index-item-tags {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.index-item-tag {
+    background-color: #000000;
+    color: #FFFAFA;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 5px; 
+    border-radius: 5px;
+}
+
+@media print {
+    #canvas, #canvas * {
+        visibility: hidden;
+    }
+
+    #timeline, #timeline * {
+        visibility: hidden;
+    }
+
+    .index-item {
+        margin-left: 50px;
+        width: 960px;
+    }
+}
