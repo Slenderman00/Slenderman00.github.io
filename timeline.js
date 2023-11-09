@@ -348,7 +348,7 @@ loadTimeline = () => {
         new Event(1546301401, 1577837401, "#838381", "Ordentlig Radio", "Developed a Radio app for Ordentlig Radio", ["JS", "React Native"]),
         new Event(1609459801, 1640995801, "#494949", "Jollestore", "Developed the webshop Jollestore.no", ["PHP", "JS", "HTML", "CSS"]),
         new Event(1664579401, 1677629401, "#838381", "Hotshot", "Developed custom boat electronics for the sailing yacht Hotshot", ["NodeJS", "JS", "HTML", "CSS", "C", "C++", "Python", "Raspberry Pi", "ESP32"]),
-        new Event(1651360201, 1654460201, "#494949", "Jokermann 2", "Develped custom boat electronics for the Norwegian TP52 Jokermannen 2", []),
+        new Event(1651360201, 1651360201, "#494949", "Jokermann 2", "Develped custom boat electronics for the Norwegian TP52 Jokermannen 2", []),
         new Event(1596237001, 1672531801, "#838381", "UiT", "Worked as a technician developing and maintaining the university of Tromsø's digital tools", ["Python", "Django", "PostgresSQL", "JS", "HTML", "CSS"]),
         new Event(1672531801, 1699402201, "#838381", "UiT", "The university promoted me to a department engineer", ["Python", "Django", "PostgresSQL", "JS", "HTML", "CSS"]),
         new Event(1451607001, 1560640201, "#838381", "High School", "Finished high school at the Oslo Cathedral school", []),
