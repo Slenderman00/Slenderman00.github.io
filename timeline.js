@@ -238,7 +238,7 @@ class Timeline {
         }
 
         //sort events by start date
-        events.sort((a, b) => { return a.startDate - b.startDate });
+        events.sort((a, b) => { return b.startDate - a.startDate });
 
         for (let event of events) {
             let indexItem = document.createElement("div");
