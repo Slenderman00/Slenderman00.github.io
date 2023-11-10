@@ -362,7 +362,7 @@ loadTimeline = () => {
         new Event(1672531801, 1699402201, "#838381", "UiT", "The university promoted me to a department engineer", ["Python", "Django", "PostgresSQL", "JS", "HTML", "CSS"]),
         new Event(1451607001, 1560640201, "#838381", "High School", "Finished high school at the Oslo Cathedral school", []),
         new Event(1560640201, 1577837401, "#838381", "Finnish Navy", "As a finnish citizen i did my obligatory millitary service as a coastal jeager with a specialization in communication technologies in the finnish navy", []),
-        new Event(1577837401, 1640995801, "#838381", "UiT", "Studied computer science at the univeristy of tromsø", []),
+        new Event(1577837401, 1640995801, "#838381", "UiT", "Studied computer science at the univeristy of Tromsø", []),
         new Event(1659309001, 1699402201, "#838381", "University College Kristiania", "Studying computer science the university college kristiania", []),
         new Event(1659309001, 1659309001, "#494949", "PyTor", "PyTor is a simple framework that enables the automatic creation of new Tor sessions.", ["Python", "Tor"], url="https://github.com/Slenderman00/PyTor"),
         new Event(1646957401, 1691017801, "#494949", "Dritings.io", "Created a free website and app that allows users to create, edit, play and share dynamic card based drinking games", ["PHP", "JS", "HTML", "CSS", "React Native", "React JS", "MySQL"], url="https://dritings.io"),
