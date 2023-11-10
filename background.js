@@ -85,16 +85,14 @@ class Nodes {
 
         // Set the lifetime of the edge to 0
         edge.lifetime = 0;
+    }
 
-        // Periodically remove edges that have exceeded their lifetime
-        const removeInterval = setInterval(() => {
-            edge.lifetime += 100; // Assuming the animation interval is 100ms
-            if (edge.lifetime >= 1000) {
-                const index = this.edges.indexOf(edge);
-                console.log("remove edge");
-                if (index !== -1) {
-                    this.edges.splice(index, 1);
-                    clearInterval(removeInterval);
+    removeEdges() {
+        setInterval(() => {
+            for (let i = 0; i < this.edges.length; i++) {
+                this.edges[i].lifetime++;
+                if (this.edges[i].lifetime > 10) {
+                    this.edges.splice(i, 1);
                 }
             }
         }, 100);
@@ -228,6 +226,7 @@ loadBackground = () => {
 
     let nodes = new Nodes(canvas);
     nodes.addNodes(1000);
+    nodes.removeEdges();
     nodes.start();
 
     //data for mousemove
