@@ -75,8 +75,15 @@ class Nodes {
     }
 
     createEdge(node1, node2) {
+        //check if the edge already exists
+        for (let edge of this.edges) {
+            if ((edge.node1 == node1 && edge.node2 == node2) || (edge.node1 == node2 && edge.node2 == node1)) {
+                return;
+            }
+        }
+
         //check the ammount of edges
-        if (this.edges.length > 50000) {
+        if (this.edges.length > 5000) {
             return;
         }
 
