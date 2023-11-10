@@ -20,7 +20,7 @@ class Timeline {
     constructor() {
         this.events = [];
         this.levels = [];
-        this.scale = 0.000005000000999999999;
+        this.scale = 0.0000035000009999999985;
 
         this.timelineParent = document.getElementById("timeline");
         this.timeline = document.createElement("canvas");
@@ -394,9 +394,9 @@ loadTimeline = () => {
         //disable scrolling
         e.preventDefault();
         if (e.deltaY > 0) {
-            timeline.scale -= 0.000001;
+            timeline.scale -= 0.0000005;
         } else {
-            timeline.scale += 0.000001;
+            timeline.scale += 0.0000005;
         }
 
         console.log(timeline.scale);
