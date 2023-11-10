@@ -112,7 +112,7 @@ body {
 }
 
 .card a:hover {
-    color: blue;
+    text-decoration: underline;
 }
 
 .social {
