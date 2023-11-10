@@ -271,6 +271,7 @@ loadBackground = () => {
         //re-init nodes class
         nodes = new Nodes(canvas);
         nodes.addNodes(1000);
+        nodes.removeEdges();
         nodes.start();
     });
 }
