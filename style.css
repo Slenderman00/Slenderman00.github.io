@@ -154,6 +154,10 @@ body {
 
     .index-item {
         margin-left: 50px;
-        width: 960px;
+        width: 800px;
+    }
+
+    .social {
+        height: 15px!important;
     }
 }
