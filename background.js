@@ -12,7 +12,7 @@ class Edge {
 
     draw(ctx) {
         //the lower the less transparent the line is
-        ctx.globalAlpha = 1 - this.lifetime / 1000;
+        ctx.globalAlpha = 1 - this.lifetime / 20;
         ctx.beginPath();
         ctx.moveTo(this.node1.posx, this.node1.posy);
         ctx.lineTo(this.node2.posx, this.node2.posy);
