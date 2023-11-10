@@ -1,11 +1,13 @@
 class Event {
-    constructor(startDate, endDate, color, title, description, tags) {
+    constructor(startDate, endDate, color, title, description, tags, url=null) {
         this.startDate = startDate;
         this.endDate = endDate;
 
         this.title = title;
         this.description = description;
         this.tags = tags;
+
+        this.url = url;
 
         this.indexee;
         this.offset = 0;
@@ -298,6 +300,13 @@ class Timeline {
                 event.hover = false;
             });
 
+            if(event.url != null) {
+                indexItem.addEventListener("click", (_event) => {
+                    //redirect to the url
+                    window.location.href = event.url;
+                });
+            }
+
             index.appendChild(indexItem);
         }
 
@@ -346,7 +355,7 @@ loadTimeline = () => {
 
     events = [
         new Event(1546301401, 1577837401, "#838381", "Ordentlig Radio", "Developed a Radio app for Ordentlig Radio", ["JS", "React Native"]),
-        new Event(1609459801, 1640995801, "#494949", "Jollestore", "Developed the webshop Jollestore.no", ["PHP", "JS", "HTML", "CSS"]),
+        new Event(1609459801, 1640995801, "#494949", "Jollestore", "Developed the webshop Jollestore.no", ["PHP", "JS", "HTML", "CSS"], url="https://jollestore.no"),
         new Event(1664579401, 1677629401, "#838381", "Hotshot", "Developed custom boat electronics for the sailing yacht Hotshot", ["NodeJS", "JS", "HTML", "CSS", "C", "C++", "Python", "Raspberry Pi", "ESP32"]),
         new Event(1651360201, 1651360201, "#494949", "Jokermann 2", "Develped custom boat electronics for the Norwegian TP52 Jokermannen 2", []),
         new Event(1596237001, 1672531801, "#838381", "UiT", "Worked as a technician developing and maintaining the university of Tromsø's digital tools", ["Python", "Django", "PostgresSQL", "JS", "HTML", "CSS"]),
@@ -355,14 +364,14 @@ loadTimeline = () => {
         new Event(1560640201, 1577837401, "#838381", "Finnish Navy", "As a finnish citizen i did my obligatory millitary service as a coastal jeager with a specialization in communication technologies in the finnish navy", []),
         new Event(1577837401, 1640995801, "#838381", "UiT", "Studied computer science at the univeristy of tromsø", []),
         new Event(1659309001, 1699402201, "#838381", "University College Kristiania", "Studying computer science the university college kristiania", []),
-        new Event(1659309001, 1659309001, "#494949", "PyTor", "PyTor is a simple framework that enables the automatic creation of new Tor sessions.", ["Python", "Tor"]),
-        new Event(1646957401, 1691017801, "#494949", "Dritings.io", "Created a free website and app that allows users to create, edit, play and share dynamic card based drinking games", ["PHP", "JS", "HTML", "CSS", "React Native", "React JS", "MySQL"]),
-        new Event(1556752201, 1557702601, "#494949", "QuickSocket", "A system for creating and using WebSockets in php applications", ["PHP"]),
-        new Event(1577664601, 1601248201, "#494949", "Visual Studio Code Internet Relay Chat", "VSIRC is an irc client for vscode", ["NodeJS", "JS", "HTML", "CSS"]),
-        new Event(1582503001, 1598569801, "#494949", "Grindr Web Access", "Developed GWA, a framework for interfacing with the Grindr api, Forcing Grindr to pull their web application", ["Python"]),
-        new Event(1694733001, 1694733001, "#838381", "Grindr Patch", "Developed an patch that modifies the Grindr application", ["Kotlin", "Java", "Android", "Smali"]),
-        new Event(1690845001, 1691449801, "#494949", "Grindr Access", "A new framework for the Grindr API", ["Python"]),
-        new Event(1575159001, 1699402201, "#494949", "Steez", "Creating machines, software and equipment for Steez ski co", []),
+        new Event(1659309001, 1659309001, "#494949", "PyTor", "PyTor is a simple framework that enables the automatic creation of new Tor sessions.", ["Python", "Tor"], url="https://github.com/Slenderman00/PyTor"),
+        new Event(1646957401, 1691017801, "#494949", "Dritings.io", "Created a free website and app that allows users to create, edit, play and share dynamic card based drinking games", ["PHP", "JS", "HTML", "CSS", "React Native", "React JS", "MySQL"], url="https://dritings.io"),
+        new Event(1556752201, 1557702601, "#494949", "QuickSocket", "A system for creating and using WebSockets in php applications", ["PHP"], url="https://github.com/Slenderman00/QuickSocket"),
+        new Event(1577664601, 1601248201, "#494949", "Visual Studio Code Internet Relay Chat", "VSIRC is an irc client for vscode", ["NodeJS", "JS", "HTML", "CSS"], url="https://github.com/Slenderman00/vsirc"),
+        new Event(1582503001, 1598569801, "#494949", "Grindr Web Access", "Developed GWA, a framework for interfacing with the Grindr api, Forcing Grindr to pull their web application", ["Python"], url="https://github.com/Slenderman00/Grindr-Web-Access"),
+        new Event(1694733001, 1694733001, "#838381", "Grindr Patch", "Developed an patch that modifies the Grindr application", ["Kotlin", "Java", "Android", "Smali"], url="https://github.com/Slenderman00/revanced-patches-grindr"),
+        new Event(1690845001, 1691449801, "#494949", "Grindr Access", "A new framework for the Grindr API", ["Python"], url="https://github.com/Slenderman00/grindr-access"),
+        new Event(1575159001, 1699402201, "#494949", "Steez", "Creating machines, software and equipment for Steez ski co", ["Hardware"], url="https://www.instagram.com/steezskico/"),
     ];
 
     timeline.addEvents(events);
