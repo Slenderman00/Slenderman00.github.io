@@ -255,6 +255,10 @@ loadBackground = () => {
         nodes.click();
     });
 
+    document.getElementsByClassName("center")[0].addEventListener("click", function(e) {
+        nodes.click();
+    });
+
     //on resize
     window.addEventListener("resize", function() {
         canvas.height = window.innerHeight * 1.2;

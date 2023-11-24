@@ -58,10 +58,10 @@ class Post {
         let description = this.description;
 
         blogPost.onclick = function (event) {
-            // Prevent the event from propagating to the body
+            //prevent the event from propagating to the body
             event.stopPropagation();
 
-            // Close any previously opened posts
+            //close any previously opened posts
             let expandedPosts = document.querySelectorAll(".blog-item.expanded");
 
             expandedPosts.forEach(function (post) {
@@ -75,11 +75,11 @@ class Post {
                 }
             });
 
-            // Toggle the expanded class on the clicked post
+            //toggle the expanded class on the clicked post
             blogPost.classList.toggle("expanded");
             blogPost.classList.toggle("hoverable");
 
-            // Update the content based on the state
+            //update the content based on the state
             if (blogPost.classList.contains("expanded")) {
                 indexItemDescription.innerHTML = data;
             } else {
