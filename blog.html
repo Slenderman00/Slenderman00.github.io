@@ -9,8 +9,7 @@
 
         <link rel="stylesheet" href="style.css">
         <script src="background.js"></script>
-        <script src="timeline.js"></script>
-        <script src="onload.js"></script>
+        <script src="blog.js"></script>
         <title>Joar Heimonen</title>
 
     </head>
@@ -32,12 +31,12 @@
                     </center>
                 </div>
                 <div class="card-navbar">
-                    <div class="navbar-item selected">
+                    <div class="navbar-item">
                         <a href="index.html">
                             Home
                         </a>
                     </div>
-                    <div class="navbar-item">
+                    <div class="navbar-item selected">
                         <a href="blog.html">
                             Blog
                         </a>
@@ -76,7 +75,9 @@
                 </div>
             </div>
         </div>
-        <div id="timeline">
-        </div>
+        <script>
+            loadBackground();
+            addPosts(document.getElementById("index-container"));
+       </script>
     </body>
 </html>

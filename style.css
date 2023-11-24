@@ -36,8 +36,10 @@ body {
 }
 
 .card .card-title {
+    position: relative;
+    top: 20px;
     width: 100%;
-    font-size: 40px;
+    font-size: 80px;
 }
 
 .card .card-content {
@@ -51,6 +53,29 @@ body {
 
 .card .card-content .inline {
     display: inline-block;
+}
+
+.card .card-navbar {
+    display: flex;
+    justify-content: right;
+}
+
+.card .card-navbar .navbar-item {
+    position: relative;
+    top: 10px;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 40px;
+    padding: 0px!important;
+}
+
+.card .card-navbar .selected a {
+    text-decoration: underline!important;
+}
+
+.card .card-navbar .navbar-item a {
+    color: #FFFAFA!important;
 }
 
 .card .infobox {
@@ -83,6 +108,27 @@ body {
     margin: 20px;
     padding: 20px;
     border-radius: 5px;
+}
+
+.blog-item {
+    color: black;
+    background-color: #FFFAFA;
+    max-height: 80px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+
+.blog-item.expanded {
+    max-height: 1000px!important;
+}
+
+.blog-item.hoverable:hover {
+    cursor: pointer!important;
+    border: 5px solid #0a0908!important;
+    background-color: #fffafad7!important;
 }
 
 .index-item:hover {
