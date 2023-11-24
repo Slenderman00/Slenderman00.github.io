@@ -30,7 +30,7 @@ class Post {
         let titleDate = document.createElement("div");
         titleDate.className = "index-item-title-date";
 
-        let date = new Date(this.date * 1000).toLocaleDateString("en-US", { year: 'numeric', month: 'long' });
+        let date = new Date(this.date * 1000).toLocaleDateString("en-US", { day: '2-digit', year: 'numeric', month: 'long' });
         titleDate.innerHTML = date;
 
         titleAndDate.appendChild(indexItemTitle);
