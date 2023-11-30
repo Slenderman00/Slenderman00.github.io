@@ -34,6 +34,12 @@ class Node {
         this.posx += this.momentumx;
         this.posy += this.momentumy;
 
+        //round down the posx and posy
+        //this.posx = Math.round(this.posx);
+        //this.posy = Math.round(this.posy);
+
+        //console.log(this.posx, this.posy)
+
         //make sure the node stays within the canvas
         if (this.posx < 0) {
             this.momentumx = -this.momentumx;
@@ -66,7 +72,7 @@ class Nodes {
         this.nodes = [];
         this.edges = [];
         this.canvas = canvas;
-        this.ctx = canvas.getContext("2d");
+        this.ctx = canvas.getContext("2d", {alpha: false});
         this.mousePos = {
             x: 0,
             y: 0
@@ -76,11 +82,17 @@ class Nodes {
     }
 
     createEdge(node1, node2) {
+        //this brute force method is bad
         //check if the edge already exists
-        for (let edge of this.edges) {
+        /*for (let edge of this.edges) {
             if ((edge.node1 == node1 && edge.node2 == node2) || (edge.node1 == node2 && edge.node2 == node1)) {
                 return;
             }
+        }*/
+
+        const edge = new Edge(node1, node2);
+        if(this.edges.includes(edge)) {
+            return;
         }
 
         //check the ammount of edges
@@ -88,7 +100,6 @@ class Nodes {
             return;
         }
 
-        const edge = new Edge(node1, node2);
         this.edges.push(edge);
 
         // Set the lifetime of the edge to 0
