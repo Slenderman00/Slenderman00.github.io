@@ -82,8 +82,6 @@ class Nodes {
     }
 
     createEdge(node1, node2) {
-        //we shuffle all the nodes to make certain different edges are created next time
-        this.nodes = this.nodes.sort((a, b) => 0.5 - Math.random());
         //this brute force method is bad
         //check if the edge already exists
         /*for (let edge of this.edges) {
@@ -179,6 +177,9 @@ class Nodes {
     }
 
     draw() {
+        //we shuffle all the nodes to make certain different edges are created next time
+        this.nodes = this.nodes.sort((a, b) => 0.5 - Math.random());
+        
         this.ctx.beginPath();
         for (let node of this.nodes) {
             //this.ctx.moveTo(node.posx, node.posy);
