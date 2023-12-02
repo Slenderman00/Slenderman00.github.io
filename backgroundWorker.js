@@ -92,7 +92,8 @@ class Nodes {
             }
         }*/
 
-        /*const edge = new Edge(node1, node2);
+        const edge = new Edge(node1, node2);
+        /*
         if(this.edges.includes(edge)) {
             return;
         }*/
