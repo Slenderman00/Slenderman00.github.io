@@ -82,6 +82,8 @@ class Nodes {
     }
 
     createEdge(node1, node2) {
+        //we shuffle all the nodes to make certain different edges are created next time
+        this.nodes = this.nodes.sort((a, b) => 0.5 - Math.random());
         //this brute force method is bad
         //check if the edge already exists
         /*for (let edge of this.edges) {
@@ -90,10 +92,10 @@ class Nodes {
             }
         }*/
 
-        const edge = new Edge(node1, node2);
+        /*const edge = new Edge(node1, node2);
         if(this.edges.includes(edge)) {
             return;
-        }
+        }*/
 
         //check the ammount of edges
         if (this.edges.length > 5000) {
