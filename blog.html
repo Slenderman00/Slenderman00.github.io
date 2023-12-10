@@ -3,81 +3,96 @@
 -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="https://use.fontawesome.com/56b8d129b4.css" media="all" rel="stylesheet">
-        <script src="https://use.fontawesome.com/56b8d129b4.js"></script>
 
-        <link rel="stylesheet" href="style.css">
-        <script src="background.js"></script>
-        <script src="blog.js"></script>
-        <title>Joar Heimonen</title>
+<head>
+    <link href="https://use.fontawesome.com/56b8d129b4.css" media="all" rel="stylesheet">
+    <script src="https://use.fontawesome.com/56b8d129b4.js"></script>
 
-    </head>
-    <body>
+    <link rel="stylesheet" href="style.css">
+    <script src="background.js"></script>
+    <script src="blog.js"></script>
+    <title>Joar Heimonen</title>
 
-        <div id="canvas-container">
-            <canvas 
-                id="canvas"
-                width="3840"
-                height="2160"
-            ></canvas>
-        </div>
+</head>
 
-        <div class="center">
-            <div class="card">
-                <div class="card-title">
-                    <center>
-                        Joar Heimonen
-                    </center>
+<body>
+
+    <div id="canvas-container">
+        <canvas id="canvas" width="3840" height="2160"></canvas>
+    </div>
+
+    <div class="center">
+        <div class="card">
+            <div class="card-title">
+                <center>
+                    Joar Heimonen
+                </center>
+            </div>
+            <div class="card-navbar">
+                <div class="navbar-item">
+                    <a href="index.html">
+                        Home
+                    </a>
                 </div>
-                <div class="card-navbar">
-                    <div class="navbar-item">
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </div>
-                    <div class="navbar-item selected">
-                        <a href="blog.html">
-                            Blog
-                        </a>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <img src="https://avatars.githubusercontent.com/u/24755365?v=4" alt="" class="round-image inline">
-                    <div class="inline infobox">
-                        <p>
-                            <h2>About me:</h2>
-                        </p>
-                        <p>
-                            I'm a 23 year old developer from Oslo. I'm interested in programming, and electronics.
-                        </p>
-                        <p>
-                            <h2>Socials:</h2>
-                            <div class="social inline">
-                                <a href="https://github.com/Slenderman00">
-                                    <h2>
-                                        <i class="fa fa-github" aria-hidden="true"></i> <element id="github">Github</element>
-                                    </h2>
-                                </a>
-                            </div>
-                            <div class="social inline">
-                                <a href="mailto://joarheimonen@live.no">
-                                    <h2>
-                                        <i class="fa fa-envelope" aria-hidden="true"></i> Joarheimonen@live.no
-                                    </h2>
-                                </a>
-                            </div>
-                        </p>
-                        
-                    </div>
-                </div>
-                <div id="index-container">
+                <div class="navbar-item selected">
+                    <a href="blog.html">
+                        Blog
+                    </a>
                 </div>
             </div>
+            <div class="card-content">
+                <img src="https://avatars.githubusercontent.com/u/24755365?v=4" alt="" class="round-image inline">
+                <div class="inline infobox">
+                    <p>
+                    <h2>About me:</h2>
+                    </p>
+                    <p>
+                        I'm a 23 year old developer from Oslo. I'm interested in programming, and electronics.
+                    </p>
+                    <p>
+                    <h2>Socials:</h2>
+                    <div class="social inline">
+                        <a href="https://github.com/Slenderman00">
+                            <h2>
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                                <element id="github">Github</element>
+                            </h2>
+                        </a>
+                    </div>
+                    <div class="social inline">
+                        <a href="mailto://joarheimonen@live.no">
+                            <h2>
+                                <i class="fa fa-envelope" aria-hidden="true"></i> Joarheimonen@live.no
+                            </h2>
+                        </a>
+                    </div>
+                    </p>
+
+                </div>
+            </div>
+            <div id="index-container">
+            </div>
         </div>
-        <script>
-            loadBackground();
-            addPosts(document.getElementById("index-container"));
-       </script>
-    </body>
+    </div>
+    <script>
+        loadBackground();
+        addPosts(document.getElementById("index-container"));
+
+        setTimeout(function () {
+            if (window.location.hash) {
+                var hash = window.location.hash.substring(1);
+                var elements = document.getElementsByClassName("index-item-title");
+                for (var i = 0; i < elements.length; i++) {
+                    console.log(elements[i].innerHTML);
+                    if (elements[i].innerHTML == hash) {
+                        elements[i].scrollIntoView();
+                        elements[i].click();
+                    }
+                }
+            }
+        }, 1000);
+
+    </script>
+</body>
+
 </html>
