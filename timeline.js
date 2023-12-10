@@ -372,6 +372,7 @@ loadTimeline = () => {
         new Event(1694733001, 1694733001, "#838381", "Grindr Patch", "Developed an patch that modifies the Grindr application", ["Kotlin", "Java", "Android", "Smali"], url="https://github.com/Slenderman00/revanced-patches-grindr"),
         new Event(1690845001, 1691449801, "#494949", "Grindr Access", "A new framework for the Grindr API", ["Python"], url="https://github.com/Slenderman00/grindr-access"),
         new Event(1575159001, 1699402201, "#494949", "Steez", "Creating machines, software and equipment for Steez ski co", ["Hardware"], url="https://www.instagram.com/steezskico/"),
+        new Event(1700019893, 1701315893, "#494949", "GoodDNS", "A DNS server that i developed", ["C#", "DNS"], url="https://github.com/Slenderman00/GoodDns"),
     ];
 
     timeline.addEvents(events);
