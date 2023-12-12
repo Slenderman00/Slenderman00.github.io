@@ -146,19 +146,22 @@ body {
 
 .blog-item.hoverable:hover {
     cursor: pointer!important;
-    border: 5px solid #0a0908!important;
+    border-left: 5px solid #0a0908!important;
+    border-right: 5px solid #0a0908!important;
     background-color: #fffafad7!important;
 }
 
 .index-item:hover {
     cursor: pointer;
-    border: 5px solid #0a0908;
+    border-left: 5px solid #0a0908!important;
+    border-right: 5px solid #0a0908!important;
     background-color: #fffafad7;
 }
 
 .index-item-hover {
     cursor: pointer;
-    border: 5px solid #0a0908;
+    border-left: 5px solid #0a0908!important;
+    border-right: 5px solid #0a0908!important;
     background-color: #fffafad7;
 }
 
