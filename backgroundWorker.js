@@ -319,6 +319,7 @@ onmessage = (event) => {
         nodes.click();
     }
     if(event.data.resize) {
+        started = false;
         nodes.stop();
         start(event.data.canvas);
     }

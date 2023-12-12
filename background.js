@@ -44,14 +44,21 @@ initBackground = () => {
 
 loadBackground = () => {
     initBackground();
+
+    //This does not work as the window is resized when scrolling on a mobile device
     //on window resize
     window.addEventListener("resize", function() {
-        //wait for the resize to finish
-        clearTimeout(window.resizedFinished);
-        window.resizedFinished = setTimeout(function(){
-            //refresh the page
-            window.location.reload();
-        }, 500);
+        //destroy worker
+        worker.terminate();
+        worker = null;
+
+        //destroy canvas
+        canvas = document.getElementById("canvas");
+        canvas.remove();
+        canvas = document.createElement("canvas");
+        canvas.id = "canvas";
+        document.getElementById("canvas-container").appendChild(canvas);
+        initBackground();
     });
 }
 

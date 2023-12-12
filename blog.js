@@ -215,6 +215,7 @@ class RichText {
             }
         }
     
+        //Replace with some sort of setTimeout
         setInterval(function () {
             for (let item of imageMap) {
                 let image = document.getElementById(item.id);
