@@ -141,7 +141,7 @@ body {
 }
 
 .blog-item.expanded {
-    max-height: 1000px!important;
+    max-height: 1500px!important;
 }
 
 .blog-item.hoverable:hover {
