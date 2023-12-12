@@ -78,7 +78,7 @@ class Post {
                     let description = post.querySelector(".index-item-description");
                     setTimeout(function () {
                         description.innerHTML = description.dataset.originalContent;
-                    }, 500);
+                    }, 1000);
                 }
             });
 
