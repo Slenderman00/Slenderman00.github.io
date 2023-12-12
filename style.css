@@ -130,7 +130,7 @@ body {
 }
 
 .blog-item .bold {
-    font-weight: bold;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
 }
 
 .blog-item .code {
