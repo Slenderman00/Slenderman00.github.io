@@ -1,3 +1,5 @@
+let imageMap = [];
+
 class Post {
     constructor(title, description, data, tags, date) {
         this.title = title;
@@ -79,6 +81,15 @@ class Post {
                     }, 500);
                 }
             });
+
+            setTimeout(function () {
+                for (let item of imageMap) {
+                    let image = document.getElementById(item.id);
+                    if (image) {
+                        image.src = item.url;
+                    }
+                }
+            }, 100);
 
             //toggle the expanded class on the clicked post
             blogPost.classList.toggle("expanded");
@@ -229,8 +240,6 @@ class RichText {
     }
 
     parse() {
-        let imageMap = [];
-
         for(let item of this.data) {
             if (item.nodeType == "embedded-asset-block") {
                 let id = "image-" + item.data.target.sys.id;
@@ -240,16 +249,6 @@ class RichText {
                 });
             }
         }
-    
-        //Replace with some sort of setTimeout
-        setInterval(function () {
-            for (let item of imageMap) {
-                let image = document.getElementById(item.id);
-                if (image) {
-                    image.src = item.url;
-                }
-            }
-        }, 1000);
 
         for (let item of this.data) {
             this.parseItem(item, this.mother);
