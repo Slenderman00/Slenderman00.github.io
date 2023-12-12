@@ -121,6 +121,25 @@ body {
     transition: max-height 1s ease;
 }
 
+.blog-item .underline {
+    text-decoration: underline;
+}
+
+.blog-item .italic {
+    font-style: italic;
+}
+
+.blog-item .bold {
+    font-weight: bold;
+}
+
+.blog-item .code {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #d4d4d4;
+    font-family: 'Roboto Mono', monospace;
+}
+
 .blog-item.expanded {
     max-height: 1000px!important;
 }

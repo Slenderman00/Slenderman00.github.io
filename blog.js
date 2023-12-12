@@ -109,7 +109,29 @@ class RichText {
         switch (item.nodeType) {
             case "text":
                 //console.log(item.value);
-                parent.appendChild(document.createTextNode(item.value));
+                let text = document.createElement("span");
+
+                //go trough item marks and check for underline, bold, italic, code
+                for (let mark of item.marks) {
+                    switch (mark.type) {
+                        case "underline":
+                            text.classList.add("underline");
+                            break;
+                        case "bold":
+                            text.classList.add("bold");
+                            break;
+                        case "italic":
+                            text.classList.add("italic");
+                            break;
+                        case "code":
+                            text = document.createElement("pre");
+                            text.classList.add("code");
+                            break;
+                    }
+                }
+                text.innerHTML = item.value;
+
+                parent.appendChild(text);
                 break;
             case "paragraph":
                 let paragraph = document.createElement("p");
@@ -160,9 +182,8 @@ class RichText {
             case "ordered-list":
                 let orderedList = document.createElement("ol");
                 for (let subItem of item.content) {
-                    let listItem = document.createElement("li");
-                    listItem.innerHTML = subItem.content[0].value;
-                    orderedList.appendChild(listItem);
+                    //console.log(subItem);
+                    this.parseItem(subItem, orderedList);
                 }
                 parent.appendChild(orderedList);
                 break;
@@ -200,7 +221,7 @@ class RichText {
             case "hr":
                 let hr = document.createElement("hr");
                 parent.appendChild(hr);
-                break;        
+                break;    
             default:
                 console.log(item);
                 break;
@@ -253,7 +274,8 @@ let addPosts = (container) => {
     fetch("https://cdn.contentful.com/spaces/030xzm76gl6f/environments/master/entries?access_token=2qct9J11QIyz6eGjuZTY5arti-xqpvC8803H0PvfTyE").then(function (response) {
         return response.json();
     }).then(function (json) {
-        //console.log(json);
+
+        console.log(json);
         for (let item of json.items) {
             let title = item.fields.title;
             let description = item.fields.description;
