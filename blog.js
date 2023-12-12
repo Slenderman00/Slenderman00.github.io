@@ -58,6 +58,11 @@ class Post {
         let description = this.description;
 
         blogPost.onclick = function (event) {
+            //if the current post is already expanded, do nothing
+            if (blogPost.classList.contains("expanded")) {
+                return;
+            }
+
             //prevent the event from propagating to the body
             event.stopPropagation();
 
