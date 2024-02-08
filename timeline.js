@@ -370,7 +370,7 @@ loadTimeline = () => {
         new Event(1556752201, 1557702601, "#494949", "QuickSocket", "A system for creating and using WebSockets in php applications", ["PHP"], url="https://github.com/Slenderman00/QuickSocket"),
         new Event(1577664601, 1601248201, "#494949", "Visual Studio Code Internet Relay Chat", "VSIRC is an irc client for vscode", ["NodeJS", "JS", "HTML", "CSS"], url="https://github.com/Slenderman00/vsirc"),
         new Event(1582503001, 1598569801, "#494949", "Grindr Web Access", "Developed GWA, a framework for interfacing with the Grindr api, Forcing Grindr to pull their web application", ["Python"], url="https://github.com/Slenderman00/Grindr-Web-Access"),
-        new Event(1694733001, 1694733001, "#838381", "Grindr Patch", "Developed an patch that modifies the Grindr application", ["Kotlin", "Java", "Android", "Smali"], url="https://github.com/Slenderman00/revanced-patches-grindr"),
+        new Event(1694733001, 1694733001, "#838381", "Grindr Patch", "Developed a patch that modifies the Grindr application", ["Kotlin", "Java", "Android", "Smali"], url="https://github.com/Slenderman00/revanced-patches-grindr"),
         new Event(1690845001, 1691449801, "#494949", "Grindr Access", "A new framework for the Grindr API", ["Python"], url="https://github.com/Slenderman00/grindr-access"),
         new Event(1575159001, 1699402201, "#494949", "Steez", "Creating machines, software and equipment for Steez ski co", ["Hardware"], url="https://www.instagram.com/steezskico/"),
         new Event(1700019893, 1701315893, "#494949", "GoodDNS", "A DNS server that i developed", ["C#", "DNS"], url="https://github.com/Slenderman00/GoodDns"),
